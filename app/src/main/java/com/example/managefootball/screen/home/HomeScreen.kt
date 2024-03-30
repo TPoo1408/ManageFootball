@@ -97,19 +97,14 @@ fun HomeScreen(modifier: Modifier = Modifier, navController: NavController,homeV
             val totalMatch = team.win - team.lose
             val score = pair.second
             if (score != currentScore || numberDiff != currentNumberDiff || totalGoal != currentTotalGoal || totalMatch != currentTotalMatch) {
-                currentRank = index + 1
-                currentScore = score
-                currentNumberDiff = numberDiff
-                currentTotalGoal = totalGoal
+                currentRank = index + 3
+                
                 currentTotalMatch = totalMatch
             }
             
             rankedTeam.remove(currentRank)
             
-
-
-            totalMatch = 0
-            numberDiff = 125
+// helo
         }
     }
 
