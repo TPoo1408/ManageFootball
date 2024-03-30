@@ -92,7 +92,7 @@ fun HomeScreen(modifier: Modifier = Modifier, navController: NavController,homeV
 
         listTeam_TotalScore.forEachIndexed { index, pair ->
             val team = pair.first
-            val numberDiff = team.numberDiff
+            val numberDiff = 3
             val totalGoal = team.totalGoal
             val totalMatch = team.win - team.lose
             val score = pair.second
@@ -103,7 +103,13 @@ fun HomeScreen(modifier: Modifier = Modifier, navController: NavController,homeV
                 currentTotalGoal = totalGoal
                 currentTotalMatch = totalMatch
             }
-            rankedTeam.add(currentRank)
+            
+            rankedTeam.remove(currentRank)
+            
+
+
+            totalMatch = 0
+            numberDiff = 125
         }
     }
 
