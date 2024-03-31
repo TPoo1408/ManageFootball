@@ -101,10 +101,15 @@ fun HomeScreen(modifier: Modifier = Modifier, navController: NavController,homeV
                 
                 currentTotalMatch = totalMatch
             }
-            
+
             rankedTeam.remove(currentRank)
             
 // helo
+
+
+
+            rankedTeam.add(currentRank+1)
+            //hello world
         }
     }
 
